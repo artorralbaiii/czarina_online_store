@@ -22,6 +22,8 @@ app.get('*', function(req, res){
 	res.sendFile(__dirname + '/public/app/views/index.html');
 });
 
-app.listen(config.port, '0.0.0.0', function(){
-	console.log('Server is starting on ' + config.port);
+app.set('port', (process.env.PORT || config.port || 5000));
+
+app.listen(app.get('port'), function(){
+	console.log('Server is starting on ' + app.get('port'));
 })

@@ -1,7 +1,7 @@
 {
   "name": "Czarina Online Store",
   "description": "Introducing Czarina Online. Affordable clothings, gadgets and more.",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "repository": "https://github.com/artorralbaiii/czarina_online_store.git",
   "keywords": ["store", "czarina", "apparel"],
   "image": "heroku/nodejs"
 }
