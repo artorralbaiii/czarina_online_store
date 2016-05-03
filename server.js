@@ -9,6 +9,19 @@ var mongoStore = require('connect-mongo/es5')(session);
 // **Custom Modules**
 var config = require('./config.js')
 // **Custom Modules**
+
+
+// **Connect to MongoDB**
+mongoose.connect(config.db_uri, function(err){
+	if(err){
+		console.log(err);
+		return;
+	} else {
+		console.log('Connected to Database');
+	}
+});
+// **Connect to MongoDB**
+
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: false, keepExtensions: true}));
@@ -26,4 +39,4 @@ app.set('port', (process.env.PORT || config.port || 5000));
 
 app.listen(app.get('port'), function(){
 	console.log('Server is starting on ' + app.get('port'));
-})
+});
